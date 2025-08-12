@@ -17,4 +17,5 @@ if __name__=="__main__":
   print("Process terminated:", p, p.is_alive())
   p.join()
   print("Process joined:", p, p.is_alive())
+  print("Process exit code:", p.exitcode)
   
