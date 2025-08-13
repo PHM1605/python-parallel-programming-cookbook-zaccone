@@ -3,4 +3,6 @@
 import celery_addTask 
 # carry on the task
 if __name__ == "__main__":
-  result = addTask.add.delay(5, 5)
+  result = celery_addTask.add.delay(5, 5)
+  print("Task ID: ", result.id)
+  print("Result: ", result.get(timeout=10))
